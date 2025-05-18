@@ -3,15 +3,7 @@
 ###
 
 
-<picture>
-  <source media="(prefers-color-scheme: dark)"
-          srcset="https://raw.githubusercontent.com/Mahdiip323231/Mahdiip323231/output/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)"
-          srcset="https://raw.githubusercontent.com/Mahdiip323231/Mahdiip323231/output/snake.svg">
-  <img alt="GitHub Contributions Snake"
-       src="https://raw.githubusercontent.com/Mahdiip323231/Mahdiip323231/output/snake.svg">
-</picture>
-
+<img src="https://raw.githubusercontent.com/akbarasghari/akbarasghari/output/snake.svg" alt="Snake animation" />
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="csharp logo"  />
   <img width="12" />
