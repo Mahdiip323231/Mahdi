@@ -1,11 +1,7 @@
 <p align="left"></p>
 
 ###
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mahdiip323231/Mahdiip323231/output/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mahdiip323231/Mahdiip323231/output/snake.svg">
-  <img alt="GitHub Contributions Snake" src="https://raw.githubusercontent.com/Mahdiip323231/Mahdiip323231/output/snake.svg">
-</picture>
+
 
 <img src="https://raw.githubusercontent.com/akbarasghari/akbarasghari/output/snake.svg" alt="Snake animation" />
 <div align="left">
