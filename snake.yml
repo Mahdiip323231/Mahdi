@@ -1,42 +1,44 @@
 # .github/workflows/snake.yml
-name: Generate snake animation
+name: Generate GitHub Contributions Snake
 
 on:
-  # every 12 hours
+  # اجرا هر 12 ساعت (00:00 و 12:00 UTC)
   schedule:
     - cron: "0 */12 * * *"
-  # manual trigger
+  # اجرا با تریگر دستی
   workflow_dispatch:
-  # on pushes to your default branch
+  # اجرا روی پوش به شاخه‌ی main
   push:
     branches:
-      - master
+      - main
 
 jobs:
-  generate:
+  generate-snake:
     permissions:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
     steps:
-      # (Optional) if you ever need to commit back to 'master' instead of a separate branch
+      # 1. چک‌اوت کردن کد برای دسترسی کامل
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # 2. تولید انیمیشن snake.svg برای گراف مشارکت‌ها
       - name: Generate snake.svg animations
         uses: Platane/snk/svg-only@v3
         with:
-          # targets your own profile contributions graph
+          # نام کاربری شما
           github_user_name: ${{ github.repository_owner }}
-          # produce both light and dark-mode SVGs
+          # خروجی‌های موردنظر؛ یکی برای حالت نرمال و یکی برای تاریک
           outputs: |
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push generated SVGs to ‘output’ branch
+      # 3. منتشر کردن فایل‌های تولیدشده در شاخه‌ی output
+      - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
